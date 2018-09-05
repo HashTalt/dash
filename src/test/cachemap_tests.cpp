@@ -1,8 +1,8 @@
-// Copyright (c) 2014-2017 The Dash Core developers
+// Copyright (c) 2014-2017 The Hashtalt Core developers
 
 #include "cachemap.h"
 
-#include "test/test_dash.h"
+#include "test/test_hashtalt.h"
 
 #include <boost/test/unit_test.hpp>
 

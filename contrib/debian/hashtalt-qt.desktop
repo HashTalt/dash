@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Hashtalt Core
+Comment=Hashtalt P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Hashtalt peer-to-peer Netzwerk
+Comment[fr]=Hashtalt, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Hashtalt, eşten eşe kriptografik sanal para birimi
+Exec=hashtalt-qt %u
+Terminal=false
+Type=Application
+Icon=hashtalt128
+MimeType=x-scheme-handler/hashtalt;
+Categories=Office;Finance;

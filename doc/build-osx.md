@@ -24,17 +24,17 @@ If you want to build the disk image with `make deploy` (.dmg / optional), you ne
 
 NOTE: Building with Qt4 is still supported, however, doing so could result in a broken UI. Therefore, building with Qt5 is recommended.
 
-Build Dash Core
+Build Hashtalt Core
 ------------------------
 
-1. Clone the Dash Core source code and cd into `dash`
+1. Clone the Hashtalt Core source code and cd into `hashtalt`
 
-        git clone https://github.com/dashpay/dash
-        cd dash
+        git clone https://github.com/hashtaltpay/hashtalt
+        cd hashtalt
 
-2.  Build Dash Core:
+2.  Build Hashtalt Core:
 
-    Configure and build the headless dash binaries as well as the GUI (if Qt is found).
+    Configure and build the headless hashtalt binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -53,37 +53,37 @@ Build Dash Core
 Running
 -------
 
-Dash Core is now available at `./src/dashd`
+Hashtalt Core is now available at `./src/hashtaltd`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=dashrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/DashCore/dash.conf"
+    echo -e "rpcuser=hashtaltrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/HashtaltCore/hashtalt.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/DashCore/dash.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/HashtaltCore/hashtalt.conf"
 
-The first time you run dashd, it will start downloading the blockchain. This process could take several hours.
+The first time you run hashtaltd, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/DashCore/debug.log
+    tail -f $HOME/Library/Application\ Support/HashtaltCore/debug.log
 
 Other commands:
 -------
 
-    ./src/dashd -daemon # Starts the dash daemon.
-    ./src/dash-cli --help # Outputs a list of command-line options.
-    ./src/dash-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/hashtaltd -daemon # Starts the hashtalt daemon.
+    ./src/hashtalt-cli --help # Outputs a list of command-line options.
+    ./src/hashtalt-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Using Qt Creator as IDE
 ------------------------
-You can use Qt Creator as an IDE, for dash development.
+You can use Qt Creator as an IDE, for hashtalt development.
 Download and install the community edition of [Qt Creator](https://www.qt.io/download/).
 Uncheck everything except Qt Creator during the installation process.
 
 1. Make sure you installed everything through Homebrew mentioned above
 2. Do a proper ./configure --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "dash-qt" as project name, enter src/qt as location
+4. Enter "hashtalt-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."

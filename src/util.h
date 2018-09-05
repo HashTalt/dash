@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2014-2017 The Dash Core developers
+// Copyright (c) 2014-2017 The Hashtalt Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,7 +12,7 @@
 #define BITCOIN_UTIL_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/dash-config.h"
+#include "config/hashtalt-config.h"
 #endif
 
 #include "compat.h"
@@ -42,7 +42,7 @@
 #define DBG( x ) 
 #endif
 
-//Dash only features
+//Hashtalt only features
 
 extern bool fMasternodeMode;
 extern bool fLiteMode;
@@ -236,7 +236,7 @@ std::string GetThreadName();
  */
 template <typename Callable> void TraceThread(const char* name,  Callable func)
 {
-    std::string s = strprintf("dash-%s", name);
+    std::string s = strprintf("hashtalt-%s", name);
     RenameThread(s.c_str());
     try
     {

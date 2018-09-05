@@ -1,0 +1,6 @@
+usr/local/bin/hashtalt-qt usr/bin
+share/pixmaps/hashtalt32.xpm usr/share/pixmaps
+share/pixmaps/hashtalt16.xpm usr/share/pixmaps
+share/pixmaps/hashtalt128.png usr/share/pixmaps
+debian/hashtalt-qt.desktop usr/share/applications
+debian/hashtalt-qt.protocol usr/share/kde4/services/

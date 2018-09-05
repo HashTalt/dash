@@ -1,5 +1,5 @@
-Building Dash
+Building Hashtalt
 =============
 
 See doc/build-*.md for instructions on building the various
-elements of the Dash Core reference implementation of Dash.
+elements of the Hashtalt Core reference implementation of Hashtalt.

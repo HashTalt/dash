@@ -1,0 +1,22 @@
+[Unit]
+Description=Hashtalt's distributed currency daemon
+After=network.target
+
+[Service]
+User=hashtaltcore
+Group=hashtaltcore
+
+Type=forking
+PIDFile=/var/lib/hashtaltd/hashtaltd.pid
+ExecStart=/usr/bin/hashtaltd -daemon -pid=/var/lib/hashtaltd/hashtaltd.pid \
+-conf=/etc/hashtaltcore/hashtalt.conf -datadir=/var/lib/hashtaltd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

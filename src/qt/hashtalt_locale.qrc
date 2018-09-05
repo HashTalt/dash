@@ -1,0 +1,21 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/hashtalt_bg.qm</file>
+        <file alias="de">locale/hashtalt_de.qm</file>
+        <file alias="en">locale/hashtalt_en.qm</file>
+        <file alias="es">locale/hashtalt_es.qm</file>
+        <file alias="fi">locale/hashtalt_fi.qm</file>
+        <file alias="fr">locale/hashtalt_fr.qm</file>
+        <file alias="it">locale/hashtalt_it.qm</file>
+        <file alias="ja">locale/hashtalt_ja.qm</file>
+        <file alias="nl">locale/hashtalt_nl.qm</file>
+        <file alias="pl">locale/hashtalt_pl.qm</file>
+        <file alias="pt">locale/hashtalt_pt.qm</file>
+        <file alias="ru">locale/hashtalt_ru.qm</file>
+        <file alias="sk">locale/hashtalt_sk.qm</file>
+        <file alias="sv">locale/hashtalt_sv.qm</file>
+        <file alias="vi">locale/hashtalt_vi.qm</file>
+        <file alias="zh_CN">locale/hashtalt_zh_CN.qm</file>
+        <file alias="zh_TW">locale/hashtalt_zh_TW.qm</file>
+    </qresource>
+</RCC>
