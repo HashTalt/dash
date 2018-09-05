@@ -728,7 +728,7 @@ bool CPrivateSendServer::CreateNewSession(const CDarksendAccept& dsa, PoolMessag
 
     // start new session
     nMessageIDRet = MSG_NOERR;
-    nSessionID = GetRandInt(988799)+1;
+    nSessionID = GetRandInt(999999)+1;
     nSessionDenom = dsa.nDenom;
     // nInputCount is not covered by legacy signature, require SPORK_6_NEW_SIGS to activate to use new algo
     // (to make sure nInputCount wasn't modified by some intermediary node)

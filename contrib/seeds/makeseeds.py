@@ -16,9 +16,8 @@ MAX_LAST_PAID_DIFF = 60 * 60 * 24 * 30 # 1 month
 
 # These are hosts that have been observed to be behaving strangely (e.g.
 # aggressively connecting to every node).
-SUSPICIOUS_HOSTS = set([
-    "127.0.0.1"  - наш ип  основной ноды
-])
+SUSPICIOUS_HOSTS = {
+}
 
 import re
 import sys
