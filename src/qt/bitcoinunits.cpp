@@ -19,9 +19,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(DASH);
-    unitlist.append(mDASH);
-    unitlist.append(uDASH);
+    unitlist.append(HASHTALT);
+    unitlist.append(mHASHTALT);
+    unitlist.append(uHASHTALT);
     unitlist.append(duffs);
     return unitlist;
 }
@@ -30,9 +30,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case DASH:
-    case mDASH:
-    case uDASH:
+    case HASHTALT:
+    case mHASHTALT:
+    case uHASHTALT:
     case duffs:
         return true;
     default:
@@ -46,9 +46,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("DASH");
-            case mDASH: return QString("mDASH");
-            case uDASH: return QString::fromUtf8("μDASH");
+            case HASHTALT: return QString("HASHTALT");
+            case mHASHTALT: return QString("mHASHTALT");
+            case uHASHTALT: return QString::fromUtf8("μHASHTALT");
             case duffs: return QString("duffs");
             default: return QString("???");
         }
@@ -57,9 +57,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("tDASH");
-            case mDASH: return QString("mtDASH");
-            case uDASH: return QString::fromUtf8("μtDASH");
+            case HASHTALT: return QString("tHASHTALT");
+            case mHASHTALT: return QString("mtHASHTALT");
+            case uHASHTALT: return QString::fromUtf8("μtHASHTALT");
             case duffs: return QString("tduffs");
             default: return QString("???");
         }
@@ -72,9 +72,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("Hashtalt");
-            case mDASH: return QString("Milli-Hashtalt (1 / 1" THIN_SP_UTF8 "000)");
-            case uDASH: return QString("Micro-Hashtalt (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case HASHTALT: return QString("Hashtalt");
+            case mHASHTALT: return QString("Milli-Hashtalt (1 / 1" THIN_SP_UTF8 "000)");
+            case uHASHTALT: return QString("Micro-Hashtalt (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-Hashtalt (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -83,9 +83,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case DASH: return QString("TestHashtalts");
-            case mDASH: return QString("Milli-TestHashtalt (1 / 1" THIN_SP_UTF8 "000)");
-            case uDASH: return QString("Micro-TestHashtalt (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case HASHTALT: return QString("TestHashtalts");
+            case mHASHTALT: return QString("Milli-TestHashtalt (1 / 1" THIN_SP_UTF8 "000)");
+            case uHASHTALT: return QString("Micro-TestHashtalt (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case duffs: return QString("Ten Nano-TestHashtalt (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -96,9 +96,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case DASH:  return 100000000;
-    case mDASH: return 100000;
-    case uDASH: return 100;
+    case HASHTALT:  return 100000000;
+    case mHASHTALT: return 100000;
+    case uHASHTALT: return 100;
     case duffs: return 1;
     default:   return 100000000;
     }
@@ -108,9 +108,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case DASH: return 8;
-    case mDASH: return 5;
-    case uDASH: return 2;
+    case HASHTALT: return 8;
+    case mHASHTALT: return 5;
+    case uHASHTALT: return 2;
     case duffs: return 0;
     default: return 0;
     }

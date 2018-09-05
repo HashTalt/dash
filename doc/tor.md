@@ -1,4 +1,4 @@
-TOR SUPPORT IN DASH CORE
+TOR SUPPORT IN HASHTALT CORE
 =======================
 
 It is possible to run Hashtalt Core as a Tor hidden service, and connect to such services.

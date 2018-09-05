@@ -104,7 +104,7 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 Copy hashtaltd.init to /etc/init.d/hashtaltd. Test by running `service hashtaltd start`.
 
 Using this script, you can adjust the path and flags to the hashtaltd program by
-setting the DASHD and FLAGS environment variables in the file
+setting the HASHTALTD and FLAGS environment variables in the file
 /etc/sysconfig/hashtaltd. You can also use the DAEMONOPTS environment variable here.
 
 4e) Mac OS X

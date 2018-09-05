@@ -21,9 +21,9 @@ BITCOIN_TX_NAME=hashtalt-tx
 
 AC_CANONICAL_HOST
 
-AH_TOP([#ifndef DASH_CONFIG_H])
-AH_TOP([#define DASH_CONFIG_H])
-AH_BOTTOM([#endif //DASH_CONFIG_H])
+AH_TOP([#ifndef HASHTALT_CONFIG_H])
+AH_TOP([#define HASHTALT_CONFIG_H])
+AH_BOTTOM([#endif //HASHTALT_CONFIG_H])
 
 dnl faketime breaks configure and is only needed for make. Disable it here.
 unset FAKETIME
