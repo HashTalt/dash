@@ -196,7 +196,7 @@ public:
         genesis = CreateGenesisBlock(1536181200, 1191755, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x00000c7cff05db37223cd0375ba4993b50f617b58fd6fb68366390de98253304"));
-        assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
+        assert(genesis.hashMerkleRoot == uint256S("0xe9edabd296b7a27738dfedab7feb6977f1716e6007a3135b4a8cd76a6e15229b"));
 
 
         vSeeds.push_back(CDNSSeedData("hashtalt.org", "dnsseed.hashtalt.org"));
@@ -320,10 +320,10 @@ public:
         nDefaultPort = 19887;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1536181201, 1968625, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1536181201, 1968625, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x000008a88f943ebc7ca57476b759889261a94105b68a24323011f42431b4b240"));
-        assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
+        assert(genesis.hashMerkleRoot == uint256S("0xe9edabd296b7a27738dfedab7feb6977f1716e6007a3135b4a8cd76a6e15229b"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -437,10 +437,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x000000000000000000000000000000000000000000000000000000000000000");
 
-        pchMessageStart[0] = 0xv2;
-        pchMessageStart[1] = 0xaa;
-        pchMessageStart[2] = 0xbf;
-        pchMessageStart[3] = 0x1e;
+        pchMessageStart[0] = 0xbf;
+        pchMessageStart[1] = 0x0c;
+        pchMessageStart[2] = 0x6b;
+        pchMessageStart[3] = 0xbd;
         vAlertPubKey = ParseHex("042befe3a496987c530e3dfb96d0e7b0471d49150233d650bb42c756f279bac1e80d6dc03f449336a19e44990b6057170eacc499e77fde00847b5f10d2b82f55c8");
         nDefaultPort = 19887;
         nPruneAfterHeight = 1000;
@@ -554,17 +554,17 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
 
-        pchMessageStart[0] = 0xfc;
-        pchMessageStart[1] = 0xc1;
-        pchMessageStart[2] = 0xb7;
-        pchMessageStart[3] = 0xdc;
+        pchMessageStart[0] = 0xbf;
+        pchMessageStart[1] = 0x0c;
+        pchMessageStart[2] = 0x6b;
+        pchMessageStart[3] = 0xbd;
         nDefaultPort = 19883;
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1536181202, 1106743, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x00000939f1648a4b78eb2682c3bf53213b0e34ef37bc56d39927b527a7685602"));
-        assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
+        assert(genesis.hashMerkleRoot == uint256S("0xe9edabd296b7a27738dfedab7feb6977f1716e6007a3135b4a8cd76a6e15229b"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
