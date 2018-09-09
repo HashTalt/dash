@@ -175,7 +175,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_BIP147].nThreshold = 3226; // 80% of 4032
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00"); // 888900
+        consensus.nMinimumChainWork = uint256S("0x00"); //consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000081021b74f9f47bbd7bc"); // 888900
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x0000000000000026c29d576073ab51ebd1d3c938de02e9a44c7ee9e16f82db28"); // 888900
@@ -185,20 +185,20 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0x1c;
-        pchMessageStart[1] = 0xbd;
-        pchMessageStart[2] = 0xcb;
-        pchMessageStart[3] = 0x4f;
+        pchMessageStart[0] = 0xd1;
+        pchMessageStart[1] = 0xb2;
+        pchMessageStart[2] = 0xa4;
+        pchMessageStart[3] = 0xdc;
         vAlertPubKey = ParseHex("04210ce1e47dc16869a5837fd6bba43b811fa47e02592faf125c25398b8c8f0ce633cb353231b42afa5348c72420baa2f89c52a901c92a2852fc2abe662b86d8af");
         nDefaultPort = 9887;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1536181200, 1191755, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1536535800, 129897, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000c7cff05db37223cd0375ba4993b50f617b58fd6fb68366390de98253304"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000bd034ed67c560069dc7067eaa37b5f4af6f738cdb860dfcc17379cd2023"));
         assert(genesis.hashMerkleRoot == uint256S("0xe9edabd296b7a27738dfedab7feb6977f1716e6007a3135b4a8cd76a6e15229b"));
 
-        vSeeds.push_back(CDNSSeedData("hashtalt.org", "hashtalt.org"));
+
         //vSeeds.push_back(CDNSSeedData("hashtalt.org", "dnsseed.hashtalt.org"));
         //vSeeds.push_back(CDNSSeedData("hashtaltdot.io", "dnsseed.hashtaltdot.io"));
         //vSeeds.push_back(CDNSSeedData("masternode.io", "dnsseed.masternode.io"));
@@ -234,11 +234,11 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (  0, uint256S("0x00000c7cff05db37223cd0375ba4993b50f617b58fd6fb68366390de98253304"))
+            (  0, uint256S("0x00000bd034ed67c560069dc7067eaa37b5f4af6f738cdb860dfcc17379cd2023"))
         };
 
         chainTxData = ChainTxData{
-            1536181200, // * UNIX timestamp of last known number of transactions
+            1536535800, // * UNIX timestamp of last known number of transactions
             0,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             2800         // * estimated number of transactions per second after that timestamp
@@ -312,24 +312,24 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x0000000004a7878409189b7a8f75b3815d9b8c45ee8f79955a6c727d83bddb04"); // 143200
 
-        pchMessageStart[0] = 0xd1;
-        pchMessageStart[1] = 0xb2;
-        pchMessageStart[2] = 0xa4;
-        pchMessageStart[3] = 0xdc;
+        pchMessageStart[0] = 0xbf;
+        pchMessageStart[1] = 0x0c;
+        pchMessageStart[2] = 0x6b;
+        pchMessageStart[3] = 0xbd;
         vAlertPubKey = ParseHex("042befe3a496987c530e3dfb96d0e7b0471d49150233d650bb42c756f279bac1e80d6dc03f449336a19e44990b6057170eacc499e77fde00847b5f10d2b82f55c8");
         nDefaultPort = 19887;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1536181201, 1968625, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1536535801, 1546634, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000008a88f943ebc7ca57476b759889261a94105b68a24323011f42431b4b240"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000090a446903b62390bacc9f794bc11c076ec5116859fd7d9124a98ee566e6"));
         assert(genesis.hashMerkleRoot == uint256S("0xe9edabd296b7a27738dfedab7feb6977f1716e6007a3135b4a8cd76a6e15229b"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.push_back(CDNSSeedData("hashtaltdot.io",  "testnet-seed.hashtaltdot.io"));
-        vSeeds.push_back(CDNSSeedData("masternode.io", "test.dnsseed.masternode.io"));
+        //vSeeds.push_back(CDNSSeedData("hashtaltdot.io",  "testnet-seed.hashtaltdot.io"));
+        //vSeeds.push_back(CDNSSeedData("masternode.io", "test.dnsseed.masternode.io"));
 
         // Testnet Hashtalt addresses start with 'y'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
@@ -359,7 +359,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (    0, uint256S("0x000008a88f943ebc7ca57476b759889261a94105b68a24323011f42431b4b240"))
+            (    0, uint256S("0x0x0000090a446903b62390bacc9f794bc11c076ec5116859fd7d9124a98ee566e6"))
         };
 
         chainTxData = ChainTxData{        
@@ -561,9 +561,9 @@ public:
         nDefaultPort = 19883;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1536181202, 1106743, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1536535802, 664801, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000939f1648a4b78eb2682c3bf53213b0e34ef37bc56d39927b527a7685602"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000b57609c48965af65f83627b7502f30aba7f539b87121a5e2b9b463aec5c"));
         assert(genesis.hashMerkleRoot == uint256S("0xe9edabd296b7a27738dfedab7feb6977f1716e6007a3135b4a8cd76a6e15229b"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
@@ -583,7 +583,7 @@ public:
 
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of
-            ( 0, uint256S("0x00000939f1648a4b78eb2682c3bf53213b0e34ef37bc56d39927b527a7685602"))
+            ( 0, uint256S("0x00000b57609c48965af65f83627b7502f30aba7f539b87121a5e2b9b463aec5c"))
         };
 
         chainTxData = ChainTxData{
