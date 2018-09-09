@@ -178,17 +178,17 @@ public:
         consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000081021b74f9f47bbd7bc"); // 888900
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x00000c7cff05db37223cd0375ba4993b50f617b58fd6fb68366390de98253304"); // 888900
+        consensus.defaultAssumeValid = uint256S("0x0000000000000026c29d576073ab51ebd1d3c938de02e9a44c7ee9e16f82db28"); // 888900
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xbf;
-        pchMessageStart[1] = 0x0c;
-        pchMessageStart[2] = 0x6b;
-        pchMessageStart[3] = 0xbd;
+        pchMessageStart[0] = 0x1c;
+        pchMessageStart[1] = 0xbd;
+        pchMessageStart[2] = 0xcb;
+        pchMessageStart[3] = 0x4f;
         vAlertPubKey = ParseHex("04210ce1e47dc16869a5837fd6bba43b811fa47e02592faf125c25398b8c8f0ce633cb353231b42afa5348c72420baa2f89c52a901c92a2852fc2abe662b86d8af");
         nDefaultPort = 9887;
         nPruneAfterHeight = 100000;
@@ -310,12 +310,12 @@ public:
         consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000003be69c34b1244f"); // 143200
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000008a88f943ebc7ca57476b759889261a94105b68a24323011f42431b4b240"); // 143200
+        consensus.defaultAssumeValid = uint256S("0x0000000004a7878409189b7a8f75b3815d9b8c45ee8f79955a6c727d83bddb04"); // 143200
 
-        pchMessageStart[0] = 0xce;
-        pchMessageStart[1] = 0xe2;
-        pchMessageStart[2] = 0xca;
-        pchMessageStart[3] = 0xff;
+        pchMessageStart[0] = 0xae;
+        pchMessageStart[1] = 0xb2;
+        pchMessageStart[2] = 0x3a;
+        pchMessageStart[3] = 0xf1;
         vAlertPubKey = ParseHex("042befe3a496987c530e3dfb96d0e7b0471d49150233d650bb42c756f279bac1e80d6dc03f449336a19e44990b6057170eacc499e77fde00847b5f10d2b82f55c8");
         nDefaultPort = 19887;
         nPruneAfterHeight = 1000;
@@ -366,7 +366,7 @@ public:
             1536181201, // * UNIX timestamp of last known number of transactions
             0,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
-            0.1        // * estimated number of transactions per second after that timestamp
+            500        // * estimated number of transactions per second after that timestamp
         };
 
     }
@@ -447,7 +447,7 @@ public:
 
         genesis = CreateGenesisBlock(1417713337, 1096447, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000939f1648a4b78eb2682c3bf53213b0e34ef37bc56d39927b527a7685602"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000008ca1832a4baf228eb1553c03d3a2c8e02399550dd6ea8d65cec3ef23d2e"));
         assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
 
         devnetGenesis = FindDevNetGenesisBlock(consensus, genesis, 50 * COIN);
