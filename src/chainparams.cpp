@@ -175,7 +175,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_BIP147].nThreshold = 3226; // 80% of 4032
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000081021b74f9f47bbd7bc"); // 888900
+        consensus.nMinimumChainWork = uint256S("0x00"); // 888900
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x0000000000000026c29d576073ab51ebd1d3c938de02e9a44c7ee9e16f82db28"); // 888900
@@ -198,14 +198,14 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x00000c7cff05db37223cd0375ba4993b50f617b58fd6fb68366390de98253304"));
         assert(genesis.hashMerkleRoot == uint256S("0xe9edabd296b7a27738dfedab7feb6977f1716e6007a3135b4a8cd76a6e15229b"));
 
-
-        vSeeds.push_back(CDNSSeedData("hashtalt.org", "dnsseed.hashtalt.org"));
-        vSeeds.push_back(CDNSSeedData("hashtaltdot.io", "dnsseed.hashtaltdot.io"));
-        vSeeds.push_back(CDNSSeedData("masternode.io", "dnsseed.masternode.io"));
-        vSeeds.push_back(CDNSSeedData("hashtaltpay.io", "dnsseed.hashtaltpay.io"));
+        vSeeds.push_back(CDNSSeedData("hashtalt.org", "hashtalt.org"));
+        //vSeeds.push_back(CDNSSeedData("hashtalt.org", "dnsseed.hashtalt.org"));
+        //vSeeds.push_back(CDNSSeedData("hashtaltdot.io", "dnsseed.hashtaltdot.io"));
+        //vSeeds.push_back(CDNSSeedData("masternode.io", "dnsseed.masternode.io"));
+        //vSeeds.push_back(CDNSSeedData("hashtaltpay.io", "dnsseed.hashtaltpay.io"));
 
         // Hashtalt addresses start with 'X'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,76);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28);
         // Hashtalt script addresses start with '7'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,16);
         // Hashtalt private keys start with '7' or 'X'
@@ -220,7 +220,7 @@ public:
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
@@ -312,10 +312,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x0000000004a7878409189b7a8f75b3815d9b8c45ee8f79955a6c727d83bddb04"); // 143200
 
-        pchMessageStart[0] = 0xae;
+        pchMessageStart[0] = 0xd1;
         pchMessageStart[1] = 0xb2;
-        pchMessageStart[2] = 0x3a;
-        pchMessageStart[3] = 0xf1;
+        pchMessageStart[2] = 0xa4;
+        pchMessageStart[3] = 0xdc;
         vAlertPubKey = ParseHex("042befe3a496987c530e3dfb96d0e7b0471d49150233d650bb42c756f279bac1e80d6dc03f449336a19e44990b6057170eacc499e77fde00847b5f10d2b82f55c8");
         nDefaultPort = 19887;
         nPruneAfterHeight = 1000;
@@ -345,7 +345,7 @@ public:
         // Testnet Hashtalt BIP44 coin type is '1' (All coin's testnet default)
         nExtCoinType = 1;
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = false;
         fMineBlocksOnDemand = false;
@@ -471,7 +471,7 @@ public:
         // Testnet Hashtalt BIP44 coin type is '1' (All coin's testnet default)
         nExtCoinType = 1;
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = false;
         fMineBlocksOnDemand = false;
